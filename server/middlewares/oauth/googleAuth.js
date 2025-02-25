@@ -14,7 +14,7 @@ passport.use(
     new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'http://localhost:8080/auth/google/callback'
+        callbackURL: 'https://social-media-platform-utga.onrender.com/auth/google/callback'
     },
         async (accessToken, refreshToken, profile, done) => {
             try {
@@ -55,7 +55,7 @@ router.get('/auth/google', passport.authenticate('google', {
 
 router.get('/auth/google/callback',
     passport.authenticate('google',
-        { failureRedirect: 'http://localhost:3000/' }
-    ), (req, res, next) => { res.redirect('http://localhost:3000/profile') })
+        { failureRedirect: 'https://social-media-platform-frontend1.onrender.com' }
+    ), (req, res, next) => { res.redirect('https://social-media-platform-frontend1.onrender.com/homepage') })
 
 export default router;
