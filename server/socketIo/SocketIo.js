@@ -4,7 +4,7 @@ import ChatModel from '../database/models/ChatModel.js'
 export const socketInit = (server)=>{
      const io = new Server(server,{
           cors: {
-            origin: "http://localhost:3000",
+            origin: "https://social-media-platform-frontend1.onrender.com",
             methods: ["GET", "POST"]
         }
      })
