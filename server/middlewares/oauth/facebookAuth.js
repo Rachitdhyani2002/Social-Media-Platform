@@ -40,7 +40,7 @@ passport.use(
         {
             clientID: process.env.FACEBOOK_CLIENT_ID,
             clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-            callbackURL: 'http://localhost:3000/auth/facebook/callback',
+            callbackURL: 'https://social-media-platform-frontend1.onrender.com/auth/facebook/callback',
         },
         verifyCallback // Pass the verifyCallback function here
     )
@@ -61,8 +61,8 @@ router.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' 
 router.get(
     '/auth/facebook/callback',
     passport.authenticate('facebook', {
-        failureRedirect: 'http://localhost:3000/'
-    }, (req, res, next) => { res.redirect('http://localhost:3000/profile') })
+        failureRedirect: 'https://social-media-platform-frontend1.onrender.com'
+    }, (req, res, next) => { res.redirect('https://social-media-platform-frontend1.onrender.com/homepage') })
 );
 
 export default router;
