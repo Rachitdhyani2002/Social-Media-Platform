@@ -69,9 +69,9 @@ const LogInForm = () => {
     }
   };
 
-  const handleGoogleLogin = () => { window.location.href = 'http://localhost:8080/auth/google' }
+  const handleGoogleLogin = () => { window.location.href = 'https://social-media-platform-utga.onrender.com/auth/google' }
 
-  const handleFaceBookLogin = () => { window.location.href = 'http://localhost:8080/auth/facebook' }
+  const handleFaceBookLogin = () => { window.location.href = 'https://social-media-platform-utga.onrender.com/auth/facebook' }
 
   const handleClickShowPassword = () => { setPasswordVisible(!passwordVisible); };
 
