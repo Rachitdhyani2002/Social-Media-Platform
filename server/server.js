@@ -29,7 +29,7 @@ const app = express();
 
 //Middlewares
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://social-media-platform-frontend1.onrender.com",
     credentials:true
 }))
 app.use(express.json())
