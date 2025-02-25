@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { io } from 'socket.io-client';
 import axios from 'axios';
 
-const socket = io("http://localhost:8080");
+const socket = io("https://social-media-platform-utga.onrender.com");
 
 const UserChat = () => {
   const location = useLocation();
