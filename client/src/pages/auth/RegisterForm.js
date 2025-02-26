@@ -60,9 +60,9 @@ const RegisterForm = () => {
 
       });
 
-      console.log('Login successful:', response.data);
+      console.log('Register successful:', response.data);
       localStorage.setItem("auth", JSON.stringify(response.data.user));
-      navigate('/profile');
+      navigate('/');
       alert('User successfully registered!');
 
     } catch (err) {
